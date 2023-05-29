@@ -4,6 +4,7 @@ set number                	" 显示行号
 set showcmd               	" 显示输入命令 
 set cursorline          	" 显示当前行 
 set hlsearch              	" 显示高亮搜索 
+set incsearch				" 增量匹配，没打一个字符都显示
 set tabstop=4				" tab等于4空格
 set scrolloff=10 			" 在上下移动光标时，光标的上方或下方至少会保留显示的行数
 set mouse=a					" 开启光标，鼠标可以点击, 或者选中
@@ -14,6 +15,7 @@ set novisualbell 			" 关闭使用可视响铃代替呼叫
 set smartindent 			" 开启新行时使用智能自动缩进
 set virtualedit=block,onemore   " 允许光标出现在最后一个字符的后面
 set laststatus=2         	" 总是显示状态栏
+set showmatch				" 括号匹配显示
 "set list lcs=tab:¦\      	" 设置默认开启对齐线
 
 nnoremap H ^
@@ -23,6 +25,9 @@ imap <c-j> <down>
 imap <c-k> <up>
 imap <c-l> <right>
 imap <c-h> <left>
+
+" 目录树开启和关闭设置
+map <F2> :NERDTreeToggle<cr>
 
 " 编码设置
 set langmenu=zh_CN.UTF-8
